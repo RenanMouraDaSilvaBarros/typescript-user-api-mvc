@@ -1,20 +1,19 @@
 import { Router } from "express";
+import { UserController } from "./controllers/user_controller"
 
 const routes = Router()
 
-routes.get('/user', (request, reponse) => {
+routes.get('/user', (request, response) => {
 
 })
 
-routes.post('/user', (request, reponse) => {
+routes.post('/user', (request, response) => UserController.create(request, response))
+
+routes.put('/user', (request, response) => {
 
 })
 
-routes.put('/user', (request, reponse) => {
-
-})
-
-routes.delete('/user', (request, reponse) => {
+routes.delete('/user', (request, response) => {
 
 })
 

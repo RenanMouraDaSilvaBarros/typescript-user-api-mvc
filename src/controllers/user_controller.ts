@@ -1,27 +1,31 @@
 import { Request, Response } from 'express'
 import { UserModel } from '../models/user_model'
+import { UserService } from '../services/user_service'
 
 class UserController {
 
-    static create(request: Request, reponse: Response): UserModel {
+    static create(request: Request, response: Response) {
 
-        const { name, email, password } = request
+        const { name, email, password }: UserModel = request.body
 
+        const newUser: UserModel = { name, email, password }
+        const userCreated = UserService.create(newUser)
+
+        return response.send(userCreated)
+    }
+
+    static get<UserModel>(request: Request, response: Response) {
 
     }
 
-    static get<UserModel>(request: Request, reponse: Response) {
+    static getAll(request: Request, response: Response) {
+    }
+
+    static update(request: Request, response: Response) {
 
     }
 
-    static getAll(request: Request, reponse: Response): Array<UserModel> {
-    }
-
-    static update(request: Request, reponse: Response) {
-
-    }
-
-    static delete(irequest: Request, reponse: Response) {
+    static delete(irequest: Request, response: Response) {
 
     }
 
