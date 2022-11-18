@@ -4,28 +4,44 @@ import { UserService } from '../services/user_service'
 
 class UserController {
 
-    static async create (request: Request, response: Response) {
+    static async create(request: Request, response: Response) {
+        const user: UserModel = request.body
 
-        const { name, email, password }: UserModel = request.body
+        const userCreated = await UserService.create(user)
 
-        const userCreated = await UserService.create({ name, email, password })
-        
         return response.send(userCreated)
     }
 
-    static get<UserModel>(request: Request, response: Response) {
+    static async getAll(request: Request, response: Response) {
+        const allUsers = await UserService.getAll()
 
+        return response.send(allUsers)
     }
 
-    static getAll(request: Request, response: Response) {
+    static async getById(request: Request, response: Response) {
+        const { id } = request.params
+
+        const user = await UserService.getById(id)
+
+        return response.send(user)
+    }
+    
+    static async update(request: Request, response: Response) {
+        const { email, password } = request.body
+        const { id } = request.params
+
+
+        const userUpdated = await UserService.update( email, password, id )
+
+        return response.send(userUpdated)
     }
 
-    static update(request: Request, response: Response) {
+    static async delete(request: Request, response: Response) {
+        const { id } = request.params
 
-    }
+        const userdeleted = await UserService.delete(id)
 
-    static delete(irequest: Request, response: Response) {
-
+        return response.send(userdeleted)
     }
 
 }
