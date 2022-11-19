@@ -2,18 +2,7 @@ import Joi from 'joi';
 import { UserModel } from '../models/user_model';
 import { CustomError } from '../helper/custom_error'
 import { UserRepository } from '../repository/user_repository';
-
-const userCreateSchema = Joi.object({
-    name: Joi.string().max(100).required(),
-    password: Joi.string().min(6).required(),
-    email: Joi.string().email().required()
-})
-
-const userUpdateSchema = Joi.object({
-    password: Joi.string().min(6).required(),
-    email: Joi.string().email().required()
-})
-
+import { userCreateSchema, userUpdateSchema } from './schemas';
 
 class UserValidation {
 

@@ -1,28 +1,28 @@
 import { UserModel } from "../models/user_model"
-import { prisma } from '../middlewares/prisma_client'
+import { postgress } from '../database/postgress'
 
 class UserRepository {
 
     static async create(user: UserModel) {
-        return prisma.user.create({ data: user })
+        return postgress.user.create({ data: user })
     }
 
     static async getAll() {
-        return prisma.user.findMany({})
+        return postgress.user.findMany({})
     }
 
     static async getByEmail(email: string) {
-        return prisma.user.findUnique({
+        return postgress.user.findUnique({
             where: { email },
         })
     }
 
     static async getById(id: string) {
-        return prisma.user.findUnique({ where: { id } })
+        return postgress.user.findUnique({ where: { id } })
     }
 
     static async upadate(email: string, password: string, id: string) {
-        return prisma.user.update({
+        return postgress.user.update({
             where: { id },
             data: {
                 email,
@@ -33,7 +33,7 @@ class UserRepository {
     }
 
     static async delete(id: string) {
-        return prisma.user.delete({ where: { id } })
+        return postgress.user.delete({ where: { id } })
     }
 
 }
