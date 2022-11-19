@@ -14,7 +14,7 @@ Aplicação de crud e autentição de usuários.
 ## API Reference
 
 
-#### Get all user
+#### Get user
 
 ```http
   GET /api/user/:${id}
