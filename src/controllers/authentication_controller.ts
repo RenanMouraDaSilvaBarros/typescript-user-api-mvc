@@ -16,11 +16,9 @@ class AuthenticationController {
         } catch (error) {
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
+            return response.status(statusCode ?? 500).send({ error: statusCode ? message : 'login error' })
         }
     }
-
-
 }
 
 export { AuthenticationController }

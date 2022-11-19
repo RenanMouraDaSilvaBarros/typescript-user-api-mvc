@@ -17,11 +17,9 @@ class UserController {
             return response.status(201).send(userCreated)
 
         } catch (error) {
-            console.log('gilvam',error)
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
-
+            return response.status(statusCode ?? 500).send({ error:  statusCode ? message : 'error when creating user' })
         }
     }
 
@@ -34,8 +32,7 @@ class UserController {
         } catch (error) {
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
-
+            return response.status(statusCode ?? 500).send({ error: statusCode ? message : ' error get all user'  })
         }
     }
 
@@ -50,8 +47,7 @@ class UserController {
         } catch (error) {
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
-
+            return response.status(statusCode ?? 500).send({ error: statusCode ? message : ' error get user'  })
         }
     }
 
@@ -69,11 +65,10 @@ class UserController {
         } catch (error) {
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
-
+            return response.status(statusCode ?? 500).send({ error: statusCode ? message : 'error when updating user'  })
         }
     }
-
+    
     static async delete(request: Request, response: Response) {
         const { id } = request.params
 
@@ -85,7 +80,7 @@ class UserController {
         } catch (error) {
             const { message, statusCode } = (error as CustomError)
 
-            return response.status(statusCode ?? 500).send({ error: message })
+            return response.status(statusCode ?? 500).send({ error: statusCode ? message : 'error deleting user'})
 
         }
     }
