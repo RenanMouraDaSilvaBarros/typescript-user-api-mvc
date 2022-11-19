@@ -7,26 +7,28 @@ Aplicação de crud e autentição de usuários.
 ## Tech Stack
 
 **Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors
-**Database** postgresql
 
 
 
 ## API Reference
 
 
-#### Get user
-
-```http
-  GET /api/user/:${id}
-```
+### Get user
 
 | Name      | Parameter | Type  |Description                | 
 | :-------- | :-------  |:----- | :------------------------- |
 | `id`       | `Path` |`string`|  **Required**. id do usuário |
 | `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
 
+#### Request
 
-Response
+```http
+  GET /api/user/:${id}
+```
+
+
+
+#### Response
 ```json
  {
 	"id": "8d427fd1-b5cf-4293-882d-7dd97594d921",
@@ -39,7 +41,9 @@ Response
 
 ```
 
-#### Get all users
+### Get all users
+
+#### Request
 
 ```http
   GET /api/user/all
@@ -49,7 +53,7 @@ Response
 | :-------- | :-------  |:----- | :------------------------- |
 | `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
 
-Response
+#### Response
 ```json
   [
 	{
@@ -73,20 +77,30 @@ Response
 ```
 
 
-#### Update user
+### Update user
+
+| Name      | Parameter | Type  |Description                | 
+| :-------- | :-------  |:----- | :------------------------- |
+| `id`       | `Path` |`string`|  **Required**. id do usuário |
+| `email`       | `body` |`string`|  **Required**. email do usuário |
+| `password`       | `body` |`string`|  **Required**. senha do usuário |
+| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
+
+#### Request
 
 ```http
   PUT /api/user/${id}
 ```
 
-| Name      | Parameter | Type  |Description                | 
-| :-------- | :-------  |:----- | :------------------------- |
-| `id`       | `Path` |`string`|  **Required**. id do usuário |
-| `email`       | `Path` |`string`|  **Required**. email do usuário |
-| `password`       | `Path` |`string`|  **Required**. senha do usuário |
-| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
+#### body
+```json
+{
+	"email": "d@cmail.com",
+    "password": "123456"
+}
+```
 
-Response
+#### Response
 ```json
  {
 	"id": "8d427fd1-b5cf-4293-882d-7dd97594d921",
@@ -100,18 +114,22 @@ Response
 ```
 
 
-#### Delete  user
+### Delete  user
 
-```http
-  DELETE /api/user/${id}
-```
 
 | Name      | Parameter | Type  |Description                | 
 | :-------- | :-------  |:----- | :------------------------- |
 | `id`       | `Path`   |`string`|  **Required**. id do usuário |
 | `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
 
-Response
+
+#### Request
+```http
+  DELETE /api/user/${id}
+```
+
+
+#### Response
 ```json
  {
 	"id": "8d427fd1-b5cf-4293-882d-7dd97594d921",
@@ -125,29 +143,32 @@ Response
 ```
 
 
-#### Login
+### Login
+| Name      | Parameter | Type  |Description                | 
+| :-------- | :-------  |:----- | :------------------------- |
+| `email`       | `body` |`string`|  **Required**. email do usuário |
+| `password`       | `body` |`string`|  **Required**. senha do usuário |
+| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
 
+#### Request
 ```http
   POST /api/auth/login
 ```
+#### body
+```json
+{
+	"email": "d@cmail.com",
+    "password": "123456"
+}
+```
 
-| Name      | Parameter | Type  |Description                | 
-| :-------- | :-------  |:----- | :------------------------- |
-| `email`       | `Path` |`string`|  **Required**. email do usuário |
-| `password`       | `Path` |`string`|  **Required**. senha do usuário |
-| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
-
-
-Response
+#### Response
 ```json
 {
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI4MmU5NDVlLWMxYWQtNDZiNS05ZjM1LTdmOGZhOTdhMTYxZCIsImlhdCI6MTY2ODg2NzI4MCwiZXhwIjoxNjY5MDgzMjgwfQ.oa1vitlcrSBNQIK0i__vqviHsGMFrL3Ts-KqSBiQzVg"
 }
 
 ```
-
-
-
 
 ## Authors
 
