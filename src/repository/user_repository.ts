@@ -11,6 +11,12 @@ class UserRepository {
         return prisma.user.findMany({})
     }
 
+    static async getByEmail(email: string) {
+        return prisma.user.findUnique({
+            where: { email },
+        })
+    }
+
     static async getById(id: string) {
         return prisma.user.findUnique({ where: { id } })
     }

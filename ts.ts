@@ -1,4 +1,4 @@
-import { CustomError } from "./src/helper/error"
+import { CustomError } from "./src/helper/custom_error"
 
 try {
     throw new CustomError('odfjop', 400)
