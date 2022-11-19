@@ -55,7 +55,7 @@ Response
 	{
 		"id": "e6a45f19-b382-41bb-aa01-cc9df8a37839",
 		"name": "renan 10",
-		"email": "2018",
+		"email": "renan1@gmail.com",
 		"password":"$2b$10$tNBABb3EEBFxlsPC6etok.1wl.UlE8OfKz15WAyymRytQszH0ax22",
 		"update_at": "2022-11-18T07:20:37.403Z",
 		"create_at": "2022-11-18T07:20:37.403Z"
@@ -63,7 +63,7 @@ Response
 	{
 		"id": "957a05d5-bd9b-47c1-91ba-7cfd1f22a066",
 		"name": "renan 11",
-		"email": "2",
+		"email": "renan45@gmail.com",
 		"password": "$2b$10$tNBABb3EEBFxlsPC6etok.1wl.UlE8OfKz15WAyymRytQszH0ax22",
 		"update_at": "2022-11-18T07:37:17.804Z",
 		"create_at": "2022-11-18T07:37:17.804Z"
