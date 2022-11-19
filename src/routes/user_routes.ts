@@ -5,7 +5,7 @@ import { checkToken } from '../middlewares/check_token'
 
 const userRoutes = Router()
 
-userRoutes.get('/all', (request, response) => UserController.getAll(request, response))
+userRoutes.get('/all', checkToken, (request, response) => UserController.getAll(request, response))
 
 userRoutes.post('/', (request, response) => UserController.create(request, response))
 

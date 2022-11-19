@@ -3,6 +3,6 @@ import { AuthenticationController } from "../controllers/authentication_controll
 
 const authenticationRoutes = Router()
 
-authenticationRoutes.post('/login', (request, response) => AuthenticationController.Login(request, response))
+authenticationRoutes.post('/login', (request, response) => AuthenticationController.login(request, response))
 
 export { authenticationRoutes }

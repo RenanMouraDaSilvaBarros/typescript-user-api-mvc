@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 
 class AuthenticationController {
 
-    static async Login(request: Request, response: Response) {
+    static async login(request: Request, response: Response) {
         const { email, password } = request.body
 
         try {
