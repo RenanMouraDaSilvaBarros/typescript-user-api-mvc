@@ -25,6 +25,7 @@ class UserService {
     }
 
     static async update(email: string, password: string, id: string) {
+        password = await bcrypt.hash(password, 10)
         return UserRepository.upadate(email, password, id)
     }
 

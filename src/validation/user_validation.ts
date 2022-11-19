@@ -1,30 +1,29 @@
-import Joi from 'joi';
 import { UserModel } from '../models/user_model';
-import { CustomError } from '../helper/custom_error'
 import { UserRepository } from '../repository/user_repository';
 import { userCreateSchema, userUpdateSchema } from './schemas';
 
 class UserValidation {
 
-    static async create(user: UserModel) {
+    static async register(user: UserModel) {
 
         const { error } = userCreateSchema.validate(user);
-        if (error) {
-            throw new CustomError(error.message, 400)
-        }
+
+        if (error) return { error: error.message }
 
         const emailExists = await UserRepository.getByEmail(user.email)
-        if (emailExists) {
-            throw new CustomError("email already exists", 400)
-        }
 
+        if (emailExists) return { error: "email already exists" }
     }
 
-    static update(email: string, password: string) {
+    static async update(email: string, password: string) {
+        
         const { error } = userUpdateSchema.validate({ email, password });
-        if (error) {
-            throw new CustomError(error.message, 400)
-        }
+
+        if (error) return { error: error.message }
+
+        const emailExists = await UserRepository.getByEmail(email)
+
+        if (emailExists) return { error: "email already exists" }
     }
 }
 

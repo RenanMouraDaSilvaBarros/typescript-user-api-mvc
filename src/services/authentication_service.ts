@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
+import { string } from 'joi';
 import { UserService } from './user_service';
-import { CustomError } from '../helper/custom_error'
 
 class AuthenticationService {
 
@@ -9,9 +9,13 @@ class AuthenticationService {
 
         const checkPassword = await bcrypt.compare(password, user!.password)
 
-        if (!user || !checkPassword) throw new CustomError('check your email and password', 404)
+        let error = null
 
-        return user
+        if (!user || !checkPassword) {
+            error = { error: 'check your email and password' }
+        }
+
+        return { user, error}
     }
 
 }
