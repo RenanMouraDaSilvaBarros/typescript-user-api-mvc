@@ -157,7 +157,7 @@ Aplicação de crud e autentição de usuários.
 #### body
 ```json
 {
-	"email": "d@cmail.com",
+    "email": "d@cmail.com",
     "password": "123456"
 }
 ```
