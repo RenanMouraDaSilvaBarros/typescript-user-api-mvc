@@ -13,8 +13,6 @@ services:
     build: https://github.com/RenanMouraDaSilvaBarros/user-management.git
     ports:
       - "3000:3000"
-    environment:
-      DATABASE_URL: "postgresql://postgres:admin@localhost:5433/test?schema=public"
     network_mode: "host"
     depends_on:
       - postgres
