@@ -10,6 +10,18 @@ Aplicação de crud e autentição de usuários.
 
 ## Run Locally by shell script
 
+Clone the project
+
+```bash
+  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
+```
+
+Go to the project directory
+
+```bash
+  cd user-management
+```
+
 Set permission
 
 ```bash
