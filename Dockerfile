@@ -12,7 +12,6 @@ RUN npm run build
 
 RUN npm run generate
 
-run  npm run tables
 
 CMD [ "npm", "run", "tables",";", "npm", "start" ]
 
