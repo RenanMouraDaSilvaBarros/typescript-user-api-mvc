@@ -8,6 +8,7 @@ services:
       POSTGRES_DB: "test"
     ports:
       - "5433:5432"
+    restart: always
       
   user-management:
     build: https://github.com/RenanMouraDaSilvaBarros/user-management.git
@@ -17,5 +18,7 @@ services:
     ports:
       - "3000:3000"
     network_mode: "host"
+    depends_on:
+      - postgres
 
 

@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run generate
 
-RUN npm run create-tables
+RUN npm run tables
 
 RUN npm run build
 
