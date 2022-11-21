@@ -8,7 +8,21 @@ Aplicação de crud e autentição de usuários.
 
 **Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
 
-## Run Locally
+## Run Locally by shell script
+
+Set permission
+
+```bash
+  chmod u+x start.sh
+```
+
+Run shell script
+
+```bash
+  ./start.sh
+```
+
+## Run Locally Manually
 
 Clone the project
 
@@ -22,18 +36,11 @@ Go to the project directory
   cd user-management
 ```
 
-Install dependencies
-
-```bash
-  npm i
-```
-
 Run docker compose
 
 ```bash
   docker compose up -d
 ```
-
 
 Create tables
 
