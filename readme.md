@@ -6,7 +6,7 @@ Aplicação de crud e autentição de usuários.
 
 ## Tech Stack
 
-**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose
+**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
 
 ## Run Locally
 
