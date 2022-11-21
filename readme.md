@@ -28,7 +28,7 @@ Install dependencies
   npm i
 ```
 
-Install dependencies
+Run docker compose
 
 ```bash
   docker comose up -d
