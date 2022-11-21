@@ -1,5 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 const postgress = new PrismaClient();
 
-export { postgress }
+export { postgress };

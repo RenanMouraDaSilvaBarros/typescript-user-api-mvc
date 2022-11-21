@@ -1,8 +1,8 @@
-interface UserModel{
-    id: string;
-    name: string;
-    email: string;
-    password: string;
+interface UserModel {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
 }
 
-export { UserModel }
+export { UserModel };
