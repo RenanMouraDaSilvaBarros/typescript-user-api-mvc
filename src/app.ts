@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 const app = express();
 
-dotenv.config({ path: 'src/env/.env' });
+dotenv.config({ path: '.env.test' });
 app.use(express.json());
 app.use(cors());
 app.use(routes);
