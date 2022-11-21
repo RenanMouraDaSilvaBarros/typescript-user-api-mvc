@@ -12,7 +12,6 @@ RUN npm run build
 
 RUN npm run generate
 
-
-CMD [ "npm", "run", "tables",";", "npm", "start" ]
+CMD [ "npm", "start" ]
 
 EXPOSE 3000
