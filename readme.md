@@ -44,7 +44,6 @@ Start the server
 
 ## API Reference
 
-
 ### Get user
 
 | Name      | Parameter | Type  |Description                | 

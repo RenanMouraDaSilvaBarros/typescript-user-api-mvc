@@ -10,13 +10,13 @@ class AuthenticationService {
     if (!user) {
       return { error: { error: 'check your email and password' } };
     }
-    const checkPassword = await bcrypt.compare(password, user!.password);
+    const checkPassword = await bcrypt.compare(password, user?.password);
 
     if (!checkPassword) {
       return { error: { error: 'check your email and password' } };
     }
 
-    const token: string = AuthenticationService.generateToken(
+    const token = AuthenticationService.generateToken(
       user.id,
       process.env.JWT_PRIVATE_KEY as string,
       '1 days'
@@ -29,7 +29,7 @@ class AuthenticationService {
     id: string,
     privateKey: string,
     expiresIn: string | number
-  ): string {
+  ) {
     const token = jwt.sign({ id }, privateKey, { expiresIn });
     return token;
   }
