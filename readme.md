@@ -31,7 +31,7 @@ Install dependencies
 Run docker compose
 
 ```bash
-  docker comose up -d
+  docker compose up -d
 ```
 
 
