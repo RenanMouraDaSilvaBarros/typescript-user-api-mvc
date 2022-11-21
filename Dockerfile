@@ -3,8 +3,7 @@ FROM node:16.18.1-alpine
 WORKDIR /app/user-management
 
 COPY ["package.json", "package-lock.json*", "./"]
-COPY prisma ./prisma/
-
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 RUN npm install
 
 COPY . .
