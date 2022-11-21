@@ -146,7 +146,7 @@ Create tables
 #### body
 ```json
 {
-	"email": "d@cmail.com",
+    "email": "d@cmail.com",
     "password": "123456"
 }
 ```
