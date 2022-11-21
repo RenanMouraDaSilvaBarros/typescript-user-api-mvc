@@ -19,7 +19,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd crud-application
+  cd user-management
 ```
 
 Install dependencies
