@@ -8,7 +8,6 @@ services:
       POSTGRES_DB: "test"
     ports:
       - "5433:5432"
-    restart: always
       
   user-management:
     build: https://github.com/RenanMouraDaSilvaBarros/user-management.git
