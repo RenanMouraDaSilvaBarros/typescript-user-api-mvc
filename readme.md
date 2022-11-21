@@ -9,6 +9,38 @@ Aplicação de crud e autentição de usuários.
 **Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors
 
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/RenanMouraDaSilvaBarros/crud-application.git
+```
+
+Go to the project directory
+
+```bash
+  cd crud-application
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Create tables
+
+```bash
+  npx prisma migrate dev
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
 
 ## API Reference
 
@@ -173,31 +205,4 @@ Aplicação de crud e autentição de usuários.
 ## Authors
 
 - [@RenanMouraDaSilvaBarros](https://github.com/RenanMouraDaSilvaBarros)
-
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/RenanMouraDaSilvaBarros/crud-application.git
-```
-
-Go to the project directory
-
-```bash
-  cd crud-application
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
 
