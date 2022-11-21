@@ -1,5 +1,5 @@
 
-# CRUD application
+# User-management
 
 Aplicação de crud e autentição de usuários.
 
