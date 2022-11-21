@@ -25,8 +25,15 @@ Go to the project directory
 Install dependencies
 
 ```bash
+  npm i
+```
+
+Install dependencies
+
+```bash
   docker comose up -d
 ```
+
 
 Create tables
 
