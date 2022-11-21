@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_DB: "test"
+    ports:
+      - "5433:5432"
+      
+  user-management:
+    build: https://github.com/RenanMouraDaSilvaBarros/user-management.git
+    environment:
+      JWT_PRIVATE_KEY: 40028922
+      DATABASE_URL: "postgresql://postgres:admin@localhost:5433/test?schema=public"
+    ports:
+      - "3000:3000"
+    network_mode: "host"
+
+
