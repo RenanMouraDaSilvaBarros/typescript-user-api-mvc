@@ -16,7 +16,7 @@ services:
     environment:
       DATABASE_URL: "postgresql://postgres:admin@localhost:5433/test?schema=public"
     network_mode: "host"
-    command:  npx prisma migrate dev
+    tty: true
     depends_on:
       - postgres
 
