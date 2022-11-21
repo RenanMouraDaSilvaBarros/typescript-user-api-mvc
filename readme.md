@@ -6,15 +6,14 @@ Aplicação de crud e autentição de usuários.
 
 ## Tech Stack
 
-**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors
-
+**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/RenanMouraDaSilvaBarros/crud-application.git
+  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
 ```
 
 Go to the project directory
@@ -26,7 +25,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  docker comose up -d
 ```
 
 Create tables
@@ -35,11 +34,6 @@ Create tables
   npx prisma migrate dev
 ```
 
-Start the server
-
-```bash
-  npm run dev
-```
 
 
 ## API Reference
