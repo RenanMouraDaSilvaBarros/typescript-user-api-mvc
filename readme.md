@@ -1,4 +1,4 @@
-# User-auth
+# User-api
 
 Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação.
 
