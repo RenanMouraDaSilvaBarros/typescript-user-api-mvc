@@ -1,4 +1,4 @@
-# User-management
+# User-auth
 
 Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação.
 
