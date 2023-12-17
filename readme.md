@@ -4,94 +4,6 @@
 Aplicação de crud e autentição de usuários.
 
 
-## Tech Stack
-
-**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
-
-## Run Locally by shell script
-
-Clone the project
-
-```bash
-  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
-```
-
-Go to the project directory
-
-```bash
-  cd user-management
-```
-
-Set permission
-
-```bash
-  chmod u+x start.sh
-```
-
-Run shell script
-
-```bash
-  ./start.sh
-```
-
-## Run Locally Manually
-
-Clone the project
-
-```bash
-  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
-```
-
-Go to the project directory
-
-```bash
-  cd user-management
-```
-
-Run docker compose
-
-```bash
-  docker compose up -d
-```
-
-Create tables
-
-```bash
-  npx prisma migrate dev
-```
-
-
-
-## API Reference
-
-### Get user
-
-| Name      | Parameter | Type  |Description                | 
-| :-------- | :-------  |:----- | :------------------------- |
-| `id`       | `Path` |`string`|  **Required**. id do usuário |
-| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
-
-#### Request
-
-```http
-  GET /api/user/:${id}
-```
-
-
-
-#### Response
-```json
- {
-	"id": "8d427fd1-b5cf-4293-882d-7dd97594d921",
-	"name": "renan",
-	"email": "rena4f@gmail.com",
-	"password": "$2b$10$tNBABb3EEBFxlsPC6etok.1wl.UlE8OfKz15WAyymRytQszH0ax22",
-	"update_at": "2022-11-19T14:12:32.074Z",
-	"create_at": "2022-11-18T06:45:21.456Z"
-}
-
-```
-
 ### Get all users
 
 #### Request
@@ -220,6 +132,95 @@ Create tables
 }
 
 ```
+
+## Tech Stack
+
+**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
+
+## Run Locally by shell script
+
+Clone the project
+
+```bash
+  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
+```
+
+Go to the project directory
+
+```bash
+  cd user-management
+```
+
+Set permission
+
+```bash
+  chmod u+x start.sh
+```
+
+Run shell script
+
+```bash
+  ./start.sh
+```
+
+## Run Locally Manually
+
+Clone the project
+
+```bash
+  git clone https://github.com/RenanMouraDaSilvaBarros/user-management.git
+```
+
+Go to the project directory
+
+```bash
+  cd user-management
+```
+
+Run docker compose
+
+```bash
+  docker compose up -d
+```
+
+Create tables
+
+```bash
+  npx prisma migrate dev
+```
+
+
+
+## API Reference
+
+### Get user
+
+| Name      | Parameter | Type  |Description                | 
+| :-------- | :-------  |:----- | :------------------------- |
+| `id`       | `Path` |`string`|  **Required**. id do usuário |
+| `Authorization`       | `Header` |`string`|  **Required**. token de autenticação do usuário |
+
+#### Request
+
+```http
+  GET /api/user/:${id}
+```
+
+
+
+#### Response
+```json
+ {
+	"id": "8d427fd1-b5cf-4293-882d-7dd97594d921",
+	"name": "renan",
+	"email": "rena4f@gmail.com",
+	"password": "$2b$10$tNBABb3EEBFxlsPC6etok.1wl.UlE8OfKz15WAyymRytQszH0ax22",
+	"update_at": "2022-11-19T14:12:32.074Z",
+	"create_at": "2022-11-18T06:45:21.456Z"
+}
+
+```
+
 
 ## Authors
 
