@@ -1,6 +1,11 @@
 # User-management
 
-Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação. Node, Express, Prisma, Bcrypt, Typescript, Jsonwebtoken, Joi, Cors, Docker, Docker Compose, PostgreSQL 
+Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação.
+
+
+## Tech Stack
+
+**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
 
 ### Get all users
 
@@ -159,10 +164,6 @@ Implementação de um sistema de gerenciamento de usuários com funcionalidades 
 }
 
 ```
-
-## Tech Stack
-
-**Server:** Node, Express, prisma, bcrypt, typescript, jsonwebtoken, joi, cors, docker, docker compose, postgressql
 
 ## Run Locally by shell script
 
