@@ -1,8 +1,6 @@
-
 # User-management
 
-Aplicação de crud e autentição de usuários.
-
+Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação. Node, Express, Prisma, Bcrypt, Typescript, Jsonwebtoken, Joi, Cors, Docker, Docker Compose, PostgreSQL 
 
 ### Get all users
 
