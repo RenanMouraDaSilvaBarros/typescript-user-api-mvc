@@ -1,7 +1,6 @@
 # User Api
 
-Implementação de um sistema de gerenciamento de usuários com funcionalidades de CRUD e autenticação.
-
+Implementação segura de gerenciamento de usuários: senhas são armazenadas com hashes e autenticação é feita via tokens JWT. CRUD de usuários protegido por autenticação JWT.
 
 ## Tech Stack
 
